@@ -115,7 +115,7 @@ function initMoveListener(): void {
 			if (owner) {
 				const power = strength / 100;
 				const xAxis = Math.cos(angle * (Math.PI / 180)) * power;
-				const yAxis = -(Math.sin(angle * (Math.PI / 180)) * power);
+				const yAxis = Math.sin(angle * (Math.PI / 180)) * power;
 				common.angleProp.nativeValueChange(this.owner, angle);
 				common.strengthProp.nativeValueChange(this.owner, strength);
 				common.xAxisProp.nativeValueChange(this.owner, xAxis);
