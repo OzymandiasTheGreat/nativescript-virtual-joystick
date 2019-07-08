@@ -1,6 +1,8 @@
 import { View } from 'tns-core-modules/ui/core/view';
 import { Color } from 'tns-core-modules/color';
 import { ImageSource } from 'tns-core-modules/image-source';
+import { EventData } from 'tns-core-modules/data/observable';
+
 
 export declare class VirtualJoystick extends View {
 	// Read-only
@@ -24,4 +26,12 @@ export declare class VirtualJoystick extends View {
 	public enabled: boolean;
 	// Events
 	public static moveEvent: string;
+}
+
+
+export declare interface VirtualJoystickEventData extends EventData {
+	public angle: number;
+	public strength: number;
+	public xAxis: number;
+	public yAxis: number;
 }

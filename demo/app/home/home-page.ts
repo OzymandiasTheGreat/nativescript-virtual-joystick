@@ -5,8 +5,9 @@ logic, and to set up your page’s data binding.
 */
 
 import { NavigatedData, Page } from "tns-core-modules/ui/page";
-
 import { HomeViewModel } from "./home-view-model";
+import { VirtualJoystickEventData } from 'nativescript-virtual-joystick';
+
 
 export function onNavigatingTo(args: NavigatedData) {
 	const page = <Page>args.object;
@@ -14,7 +15,8 @@ export function onNavigatingTo(args: NavigatedData) {
 	page.bindingContext = new HomeViewModel();
 }
 
-export function onMove(data) {
+
+export function onMove(data: VirtualJoystickEventData) {
 	console.log(`Angle: ${data.angle}`);
 	console.log(`Strength: ${data.strength}`);
 	console.log(`Horizontal: ${data.xAxis}`);
