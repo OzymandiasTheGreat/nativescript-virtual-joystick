@@ -1,5 +1,11 @@
 # NativeScript-Virtual-Joystick
 
+-------------------
+
+If you find this software useful, [consider becoming a patron](https://www.patreon.com/ozymandias)
+
+-------------------
+
 NativeScript plugin for Virtual Joystick UI component.
 
 ![screenshot](screenshots/demo.gif)
